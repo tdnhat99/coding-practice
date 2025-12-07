@@ -1,7 +1,5 @@
 package org.tdnhat99;
 
-import java.time.LocalDateTime;
-
 /**
  * https://www.hackerrank.com/challenges/time-conversion/problem
  *
@@ -42,15 +40,23 @@ import java.time.LocalDateTime;
  */
 public class TimeConversion {
 
-    /*
-     * Complete the 'timeConversion' function below.
-     *
-     * The function is expected to return a STRING.
-     * The function accepts STRING s as parameter.
+    /**
+     * Convert 12-hour time format to 24-hour time format
+     * @param s
+     * @return
      */
-
     public static String convert(String s) {
-        //LocalDateTime
+        int hour = Integer.parseInt(s.substring(0, 2));
+        if (s.endsWith("PM")) {
+            if (hour != 12) {
+                hour += 12;
+            }
+        } else {
+            if (hour == 12) {
+                hour = 0;
+            }
+        }
+        s = String.format("%02d", hour) + s.substring(2, s.length() - 2);
         return s;
     }
 }
