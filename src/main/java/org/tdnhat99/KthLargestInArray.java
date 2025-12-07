@@ -1,8 +1,5 @@
 package org.tdnhat99;
 
-import java.util.Collections;
-import java.util.PriorityQueue;
-
 /**
  * Kth Largest Element in an Array (Medium)
  * https://neetcode.io/problems/kth-largest-element-in-an-array/question?list=neetcode150
